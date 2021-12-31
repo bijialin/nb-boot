@@ -1,0 +1,29 @@
+server:
+  # 服务端口
+  port: 8080
+  # 服务上线文
+  context-path: nbboot
+  # 公共接口
+  public-url:
+    - /ctl/v1/login
+    - /ctl/v1/register
+
+
+# 数据库配置
+database: 
+  # mysql配置
+  mysql:
+    host: localhost
+    port: 3306
+    username: root
+    password: 111111
+  # redis 配置
+  redis: 
+    host: localhost
+    port: 6379
+    password: 
+
+# log配置
+log: 
+  level: debug
+  

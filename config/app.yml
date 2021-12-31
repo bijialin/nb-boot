@@ -1,0 +1,3 @@
+#是否动态加载配置文件
+auto-load-config: false
+run-mode: dev
