@@ -14,9 +14,9 @@ import (
 
 func init() {
 	initConfig()
+	initLog()
 	initDb()
 	initRedis()
-	initLog()
 
 }
 
@@ -72,6 +72,8 @@ func initConfig() {
 }
 
 func initDb() {
+	global.Log.Info("start init nb-boot db ")
+
 	//dbUrl := viper.GetString("database.mysql.url")
 	dbUrl := global.AppConfig.Database.Mysql.Url
 	if dbUrl != "" {
@@ -83,13 +85,16 @@ func initDb() {
 		global.Db = crtDb
 	}
 
+	global.Log.Info("finished init nb-boot db ")
+
 }
 
 func initRedis() {
+
 	//redisUrl := viper.GetString("redis.url")
 	redisUrl := global.AppConfig.Redis.Host
 	if redisUrl != "" {
-
+		global.Log.Info("start init nb-boot db ")
 	}
 }
 
