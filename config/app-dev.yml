@@ -6,8 +6,8 @@ server:
   context-path: nbboot
   # 公共接口
   public-url:
-    - /ctl/v1/login
-    - /ctl/v1/register
+    - /api/v1/login
+    - /api/v1/register
 
 
 # 数据库配置

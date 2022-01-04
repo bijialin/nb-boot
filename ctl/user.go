@@ -21,6 +21,16 @@ func NewUserCtlImpl() *UserCtl {
 		svc: service.NewUserSvcImpl(),
 	}
 }
+
+// Get user
+// @Summary 通过用户id获取用户
+// @Tags User Api
+// @Description :id 获取用户信息
+// @Accept application/x-json-stream
+// @Param        id    path      int     true  "User ID" example 1
+// @Produce  json
+// @Success 200 object res.Result
+// @Router /api/v1/user/:id [get]
 func (a *UserCtl) Get(c *gin.Context) {
 	c.JSON(200, Res.Ok())
 }

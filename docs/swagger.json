@@ -1,0 +1,54 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/api/v1/user/:id": {
+            "get": {
+                "description": ":id 获取用户信息",
+                "consumes": [
+                    "application/x-json-stream"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "User Api"
+                ],
+                "summary": "通过用户id获取用户",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/res.Result"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "res.Result": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "data": {},
+                "msg": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
